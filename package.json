@@ -1,0 +1,26 @@
+{
+  "name": "ProtractorSampleFramework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "protractor_jasmine.conf.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "allure-commandline": "^2.13.0",
+    "axios": "^0.20.0",
+    "jasmine-allure-reporter": "^1.0.2",
+    "lodash": "^4.17.20",
+    "node-fetch": "^2.6.1",
+    "protractor": "^7.0.0"
+  },
+  "scripts": {
+    "setup": "npm install && webdriver-manager update --ignore_ssl && webdriver-manager start --ignore_ssl ",
+    "test": "protractor protractor_jasmine.conf.js",
+    "report": "allure serve ./allure-results/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
