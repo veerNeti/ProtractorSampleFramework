@@ -5,9 +5,11 @@ const calculatorPO = require("../Pages/calculator.PageObjects");
 // Jasmine is fully supported as test and assertion frameworks.
 //No need to import chai
 
-// var url = "https://juliemr.github.io/protractor-demo/";
+beforeEach(function () {
+    console.log("----------------reloading Browser--------------");
+    browser.get(browser.baseUrl);
+});
 
-    browser.get('http://juliemr.github.io/protractor-demo/');
 describe('Super calculator addition', () => {
     // let Header = element(by.tagName("h3"));
     // let first = element(by.model('first'));

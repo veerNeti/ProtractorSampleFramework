@@ -6,8 +6,9 @@ const calculatorPO = require("../Pages/calculator.PageObjects");
 describe('Operations', () => {
     beforeEach(function () {
         console.log("----------------reloading Browser--------------");
-        browser.get('http://juliemr.github.io/protractor-demo/');
+        browser.get(browser.baseUrl);
     });
+    
     it('DIVISION 3-2', () => {
         a = 3; b = 2;
         calculatorPO.first.clear().sendKeys(a);

@@ -1,15 +1,14 @@
 const { browser, element, by } = require('protractor');
 const expectationForOperation = require("../utils/expectation");
 const calculatorPO = require("../Pages/calculator.PageObjects");
-var EC = protractor.ExpectedConditions;
 
+beforeEach(function () {
+    console.log("----------------reloading Browser--------------");
+    browser.get(browser.baseUrl);
+});
 
-browser.get('http://juliemr.github.io/protractor-demo/');
 describe('Addition', () => {
-    // beforeEach(function () {
-    //     console.log("----------------reloading Browser--------------");
-    //     browser.get('http://juliemr.github.io/protractor-demo/');
-    // });
+
     it('add 3+2', () => {
         a = 3; b = 2;
         calculatorPO.first.clear().sendKeys(a);

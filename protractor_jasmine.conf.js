@@ -1,6 +1,6 @@
 exports.config = {
 
-
+  'baseUrl':'http://juliemr.github.io/protractor-demo/',
   /*  
   directConnect - to connect directly to the browser Drivers.
   This option is only available for Firefox and Chrome.
@@ -9,19 +9,23 @@ exports.config = {
 
 
 
-  multiCapabilities: [{
-    'browserName': 'firefox'
-  }, {
-    'browserName': 'chrome'
-  }],
+  // multiCapabilities: [{
+  //   'browserName': 'firefox'
+  // }, {
+  //   'browserName': 'chrome'
+  // }],
 
   framework: 'jasmine',
 
   capabilities: {
-    'browserName': 'chrome',
+    // 'browserName': 'chrome',
+    'browserName': 'MicrosoftEdge',
     'maxInstances': 3,
-    'shardTestFiles': true,
-    'seleniumAddress': 'http://localhost:4444/wd/hub',
+    'elementScrollingBehavior':1,
+    'nativeEvents':false,
+    // 'shardTestFiles': true,
+    // 'seleniumAddress': 'http://localhost:4444/wd/hub',
+    'seleniumAddress': 'http://localhost:9515',
 
 
     'chromeOptions': {
