@@ -8,20 +8,19 @@
 
 # steps to run the tests:
 - npm setup
-> will update and start "webdriver manager" on port 4444
-    - `npm run edge`
-        - to run tests on Edge, but followup the setup steps layed out below in installatoion guide
-    - `npm run edge`
-        - will run tests in chrome
-    - `npm run other`
-        - will execute cross-browser parallel Gecko and chrome
-    - `npm run report`
-        - will generate allure reports
-    - `npm run api`
-        - will execute the api tests. 
-> will execute the build e2e
-    - `npm run report`
-> will launch allure reports in a default browser starting the allure server.
+    - will update and start "webdriver manager" on port 4444
+- `npm run edge`
+    - to run tests on Edge, but followup the setup steps layed out below in installatoion guide
+- `npm run edge`
+    - will run tests in chrome
+- `npm run other`
+    - will execute cross-browser parallel Gecko and chrome
+- `npm run report`
+    - will generate allure reports
+- `npm run api`
+    - will execute the api tests. 
+- `npm run report`
+    - will launch allure reports in a default browser starting the allure server.
 
 
 
