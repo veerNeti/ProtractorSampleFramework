@@ -4,7 +4,7 @@ const axios = require('axios');
 describe('Name of the group', () => {
 
     it('API: GET CALL', async () => {
-        const response = await api.getRequest('http://fakeapi.jsonparseronline.com/posts/1');
+        const response = await api.GET('http://fakeapi.jsonparseronline.com/posts/1');
         console.log('info','with apihelper object');
         // console.log(response.data);
         console.log(response.status);

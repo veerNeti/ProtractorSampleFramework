@@ -13,7 +13,7 @@
     "other": "protractor  ./conf/conf_other.js",
     "report": "allure serve ./allure-results/",
     "reports": "allure generate allure-result --clean -o allure-report || true",
-    "api": "npm run build && jasmine ../test/specs/api.js"
+    "api": "protractor ./conf/Conf_chrome.js  --suite api"
   },
   "keywords": [],
   "author": "Veeresh Bikkaneti",
