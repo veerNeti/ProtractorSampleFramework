@@ -1,14 +1,14 @@
 const { browser, element, by, ElementArrayFinder } = require('protractor');
 const expectationForOperation = require("../utils/expectation");
 const calculatorPO = require("../Pages/calculator.PageObjects");
+var EC = protractor.ExpectedConditions;
 
-// browser.get('http://juliemr.github.io/protractor-demo/');
-describe('Operations', () => {
-    beforeEach(function () {
+    beforeAll(function () {
         console.log("----------------reloading Browser--------------");
         browser.get(browser.baseUrl);
     });
-    
+describe('Operations', () => {
+
     it('DIVISION 3-2', () => {
         a = 3; b = 2;
         calculatorPO.first.clear().sendKeys(a);
@@ -73,11 +73,12 @@ describe('Operations', () => {
     it('results log validation', () => {
 
 
-        expect(element.all(by.repeater('result in memory')).count()).toEqual(0);
+        // expect(element.all(by.repeater('result in memory')).count()).toEqual(0);
 
-        expect(element.all(by.binding('result.value')).getText()).not.toBeNull;
+        // expect(element.all(by.binding('result.value')).getText()).not.toBeNull;
 
-     
+        var group = element.all(by.binding('result.value')).getText();
+       group.then()
         // console.log("object :group:=>" + group);
     });
 

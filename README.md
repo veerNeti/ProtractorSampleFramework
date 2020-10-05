@@ -13,5 +13,3 @@ From the root directory:
 > will execute the build e2e
 - npm run report
 > will launch allure reports in a default browser starting the allure server.
-
-https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads

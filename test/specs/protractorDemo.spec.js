@@ -2,14 +2,17 @@
 const { browser, element } = require('protractor');
 const calculatorPO = require("../Pages/calculator.PageObjects");
 
+// var _ = require('lodash');
+
 // Jasmine is fully supported as test and assertion frameworks.
 //No need to import chai
 
-beforeEach(function () {
+// var url = "https://juliemr.github.io/protractor-demo/";
+
+beforeAll(function () {
     console.log("----------------reloading Browser--------------");
     browser.get(browser.baseUrl);
 });
-
 describe('Super calculator addition', () => {
     // let Header = element(by.tagName("h3"));
     // let first = element(by.model('first'));
@@ -18,10 +21,6 @@ describe('Super calculator addition', () => {
     // let second = element(by.model('second'));
 
 
-    // beforeEach(function () {
-    //     console.log("----------------reloading Browser--------------");
-    //     browser.get('http://juliemr.github.io/protractor-demo/');
-    // });
 
     it('title should be \'Super Calculator\'', () => {
         expect(browser.getTitle()).toBe('Super Calculator');

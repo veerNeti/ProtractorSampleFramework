@@ -1,26 +1,33 @@
 {
   "name": "ProtractorSampleFramework",
-  "version": "1.0.0",
-  "description": "",
-  "main": "protractor_jasmine.conf.js",
+  "version": "2.0.0",
+  "description": "sample test to run UI and and API tests",
+  "main": "configuring protractor + jasmine",
   "directories": {
     "test": "test"
   },
+  "scripts": {
+    "setup": "npm install && webdriver-manager update --ignore_ssl && webdriver-manager start --ignore_ssl ",
+    "edge": "protractor   ./conf/conf_edge.js",
+    "chrome": "protractor   ./conf/Conf_chrome.js",
+    "other": "protractor  ./conf/conf_other.js",
+    "report": "allure serve ./allure-results/",
+    "reports": "allure generate allure-result --clean -o allure-report || true",
+    "api": "npm run build && jasmine ../test/specs/api.js"
+  },
+  "keywords": [],
+  "author": "Veeresh Bikkaneti",
+  "license": "ISC",
   "dependencies": {},
   "devDependencies": {
     "allure-commandline": "^2.13.0",
     "axios": "^0.20.0",
+    "jasmine": "^3.6.1",
     "jasmine-allure-reporter": "^1.0.2",
     "lodash": "^4.17.20",
-    "node-fetch": "^2.6.1",
-    "protractor": "^7.0.0"
-  },
-  "scripts": {
-    "setup": "npm install && webdriver-manager update --ignore_ssl && webdriver-manager start --ignore_ssl ",
-    "test": "protractor protractor_jasmine.conf.js",
-    "report": "allure serve ./allure-results/"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "nedb": "^1.8.0",
+    "protractor": "^7.0.0",
+    "protractor-html-reporter-2": "^1.0.4",
+    "winston": "^3.3.3"
+  }
 }
