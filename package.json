@@ -6,11 +6,11 @@
   "scripts": {
     "setup": "npm install && node node_modules/protractor/bin/webdriver-manager clean && webdriver-manager update --ignore_ssl && webdriver-manager start --ignore_ssl ",
     "edge": "start ./edgedriver_win64/msedgedriver.exe && protractor   ./conf/conf_edge.js",
-    "chrome": "protractor   ./conf/Conf_chrome.js",
+    "chrome": "node node_modules/protractor/bin/webdriver-manager update --versions.chrome=85.0.4183.83 --gecko false --ignore_ssl && protractor   ./conf/Conf_chrome.js",
     "other": "protractor  ./conf/conf_other.js",
     "report": "allure serve ./allure-results/",
     "reports": "allure generate allure-result --clean -o allure-report || true",
-    "api": "protractor  ./conf/Conf_chrome.js  --suite api"
+    "api": "node node_modules/protractor/bin/webdriver-manager update --versions.chrome=85.0.4183.83 --gecko false --ignore_ssl && protractor  ./conf/Conf_chrome.js  --suite api"
   },
   "keywords": [],
   "author": "",
