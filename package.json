@@ -1,22 +1,19 @@
 {
-  "name": "ProtractorSampleFramework",
-  "version": "2.0.0",
-  "description": "sample test to run UI and and API tests",
-  "main": "configuring protractor + jasmine",
-  "directories": {
-    "test": "test"
-  },
+  "name": "protractorFramework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "setup": "npm install && webdriver-manager update --ignore_ssl && webdriver-manager start --ignore_ssl ",
-    "edge": "protractor   ./conf/conf_edge.js",
+    "setup": "npm install && node node_modules/protractor/bin/webdriver-manager clean && webdriver-manager update --ignore_ssl && webdriver-manager start --ignore_ssl ",
+    "edge": "start ./edgedriver_win64/msedgedriver.exe && protractor   ./conf/conf_edge.js",
     "chrome": "protractor   ./conf/Conf_chrome.js",
     "other": "protractor  ./conf/conf_other.js",
     "report": "allure serve ./allure-results/",
     "reports": "allure generate allure-result --clean -o allure-report || true",
-    "api": "protractor ./conf/Conf_chrome.js  --suite api"
+    "api": "protractor  ./conf/Conf_chrome.js  --suite api"
   },
   "keywords": [],
-  "author": "Veeresh Bikkaneti",
+  "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {

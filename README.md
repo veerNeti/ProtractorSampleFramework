@@ -100,3 +100,19 @@
 > Starting MSEdgeDriver 85.0.564.68 (226c9a618a11c00d61ee433fede8d2eef5d27985) on port 9515
 - use the port number to modify the 
 `seleniumAddress: [http://localhost:9515]
+
+
+
+- issue:
+- ``DevTools listening on ws://127.0.0.1:54120/devtools/browser/0c6b9c86-a4cf-4ee4-b3b1-93a861b33e89
+[11:20:00] E/launcher - session not created: This version of ChromeDriver only supports Chrome version 86
+Current browser version is 85.0.4183.83 with binary path C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+  (Driver info: chromedriver=86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}),platform=Windows NT 10.0.19041 x86_64)
+[11:20:00] E/launcher - SessionNotCreatedError: session not created: This version of ChromeDriver only supports Chrome version 86
+Current browser version is 85.0.4183.83 with binary path C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+  (Driver info: chromedriver=86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}),platform=Windows NT 10.0.19041 x86_64)
+  ``
+
+
+> You can fix the issue by downloading the appropriate version: 
+``node node_modules/protractor/bin/webdriver-manager update --versions.chrome=85.0.4183.83 --gecko false --ignore_ssl``

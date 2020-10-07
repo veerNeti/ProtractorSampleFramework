@@ -1,0 +1,8 @@
+node_modules
+log/combined.log
+allure-results/7ee5e6ae-b836-45c3-b0de-2a33aead3940-testsuite.xml
+allure-results/77d8bb10-1615-4143-9c7d-1ac9917c294a-testsuite.xml
+allure-results/bd5fc563-e85f-4ed3-acaa-f5c7a8170f39-testsuite.xml
+allure-results/bf200b00-f6f6-4465-8cd9-01fee44eb87e-testsuite.xml
+debug.log
+allure-results/3e42f5f8-9d62-48c7-815f-1f6e10a4c6fa-testsuite.xml

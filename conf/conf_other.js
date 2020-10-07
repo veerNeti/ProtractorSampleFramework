@@ -9,7 +9,7 @@ exports.config = {
         'args': [
           'disable-infobars',
           'show-fps-counter=true',
-          "--headless",
+          // "--headless",
           "--disable-gpu"]
       }
     },

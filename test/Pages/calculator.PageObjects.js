@@ -1,6 +1,8 @@
 
 function calculatorPageObjects() {
     let Header = element(by.tagName("h3"));
+
+    
     let first = element(by.model('first'));
     let operator = element(by.model('operator'));
     let goButton = element(by.id('gobutton'));

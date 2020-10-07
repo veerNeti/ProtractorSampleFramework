@@ -3,10 +3,10 @@ const expectationForOperation = require("../utils/expectation");
 const calculatorPO = require("../Pages/calculator.PageObjects");
 var EC = protractor.ExpectedConditions;
 
-    beforeAll(function () {
-        console.log("----------------reloading Browser--------------");
-        browser.get(browser.baseUrl);
-    });
+beforeAll(function () {
+    console.log("----------------reloading Browser--------------");
+    browser.get(browser.baseUrl);
+});
 describe('Operations', () => {
 
     it('DIVISION 3-2', () => {
@@ -78,7 +78,7 @@ describe('Operations', () => {
         // expect(element.all(by.binding('result.value')).getText()).not.toBeNull;
 
         var group = element.all(by.binding('result.value')).getText();
-       group.then()
+        group.then()
         // console.log("object :group:=>" + group);
     });
 
