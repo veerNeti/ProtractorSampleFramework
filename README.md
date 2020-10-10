@@ -29,6 +29,7 @@
 - `npm install -g protractor --save--dev`
 - `protractor --version`
 - `set NODE_TLS_REJECT_UNAUTHORIZED=0`
+- `export NODE_TLS_REJECT_UNAUTHORIZED=0`
 - `webdriver-manager update --ignore_ssl`
 - `webdriver-manager status --ignore_ssl`
 - `webdriver-manager start --ignore_ssl`
