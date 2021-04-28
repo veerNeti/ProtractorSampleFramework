@@ -22,7 +22,14 @@
 - `npm run report`
     - will launch allure reports in a default browser starting the allure server.
 
-
+- `node ./node_modules/protractor/bin/webdriver-manager update`
+- CD to `FinalMile\src\test\resources\integration\finalmile\node_modules\protractor\bin`
+    - install Selenium Standalone with 
+        - `webdriver-manager update --standalone`
+    - check the status 
+        - `webdriver-manager status`
+    - start the Seleium Standalone server
+        - `webdriver-manager start`
 
 # General Installation 
 
